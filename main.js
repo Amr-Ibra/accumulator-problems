@@ -106,7 +106,13 @@ Write function named createRange that will take a number and a default value and
 Example: if you pass it 4 and "Hello" then it should return ["Hello", "Hello", "Hello", "Hello"]
 */
 
-const createRange = (length, element) => [];
+const createRange = (length, element) => {
+  let arr = [];
+  for (let i = 0; i < length; i++) {
+    arr[i] = element;
+  }
+  return arr;
+};
 
 /*
 ----------------------------------------
@@ -119,6 +125,14 @@ Example:
 
 If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "brown": 1, "fox": 2 }
 */
+
+const flipArray = (arr) => {
+  let obj = {};
+  arr.forEach((element, index) => {
+    obj[element] = index;
+  });
+  return obj;
+};
 
 /*
 ----------------------------------------
